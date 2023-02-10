@@ -1,0 +1,47 @@
+.line{
+    border-left: 2px solid #c0c0c0;
+    margin-right: 16px;
+    height: 25px;
+}
+
+.headerOpen{
+    background-color: black;
+    /* animation: headerOpen 0.5s linear; */
+}
+
+.headerContainer{
+    color: white;
+    padding: 7px 0px;
+    display: flex;
+    justify-content: center;
+    animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+    from{
+        transform: translateX(82%);
+    }
+    to{
+        transform: translateX(-82%);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .headerContainer{
+        animation: none;
+        height: 50px;
+        width: 300vw;
+        align-items: center;
+        transform: translateX(25%);
+        animation: mobileScrolling 20s linear infinite;
+    }
+}
+
+@keyframes mobileScrolling {
+    from{
+        transform: translateX(25%);
+    }
+    to{
+        transform: translateX(-95%)
+    }
+}
